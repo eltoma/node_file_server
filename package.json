@@ -1,0 +1,32 @@
+{
+  "name": "file_server",
+  "version": "1.0.0",
+  "description": "a simple file server written by node.js",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.14.0",
+    "body-parser": "^1.15.2",
+    "ejs": "^2.5.2",
+    "express-http-proxy": "^0.10.1",
+    "express-session": "^1.14.2",
+    "multer": "^0.1.6",
+    "request": "^2.79.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eltoma/NodeFileServer.git"
+  },
+  "keywords": [
+    "file"
+  ],
+  "author": "zjb & tomato",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eltoma/NodeFileServer/issues"
+  },
+  "homepage": "https://github.com/eltoma/NodeFileServer#readme"
+}
