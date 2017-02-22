@@ -14,15 +14,23 @@ module.exports = function ( app ) {
             req.session.user = user;
         } else {
             req.session.error = "用户名或密码不正确";
-            res.send( 404 );
+            // res.render('login');
+            res.writeHead(200,{
+                "Content-Type":"text/html;charset=utf-8",
+            });
+            res.write('<body>用户名或密码不正确，请重新登录！','utf-8');
+            res.end();
         }
     });
 
     app.get('/*', function(req, res) {
         console.log("用户是：" + req.session.user);
         if(req.session.user === undefined) {
-            req.session.error = "用户名或密码不正确";
-            res.send( 404 );
+            res.writeHead(200,{
+                "Content-Type":"text/html;charset=utf-8",
+            });
+            res.write('请先登录！','utf-8');
+            res.end();
             return;
         }
 
